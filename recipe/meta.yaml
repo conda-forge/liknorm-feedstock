@@ -23,7 +23,7 @@ requirements:
 
 test:
   requires:
-    - python 3.5.*  # [win and py35]
+    - python  # [win]
   commands:
     - test -e $PREFIX/lib/libliknorm.so  # [linux]
     - test -e $PREFIX/lib/libliknorm_static.a  # [linux]
