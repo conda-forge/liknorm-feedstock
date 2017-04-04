@@ -1,7 +1,7 @@
 About liknorm
 =============
 
-Home: http://github.com/glimix/liknorm
+Home: https://github.com/limix/liknorm
 
 Package license: MIT
 
