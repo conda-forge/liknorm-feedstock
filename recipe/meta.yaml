@@ -12,8 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  skip: True  # [win32 or (win and not py35)]
+  number: 1
+  skip: True  # [win32 or (win and py<35)]
 
 requirements:
   build:
@@ -33,13 +33,13 @@ test:
     - if NOT exist %PREFIX%/lib/liknorm_static.lib exit 1  # [win]
 
 about:
-  home: http://github.com/glimix/liknorm
+  home: https://github.com/limix/liknorm
   license: MIT
   license_family: MIT
   license_file: LICENSE
   summary: 'Moments of the product of an exponential-family likelihood with a Normal distribution'
-  doc_url: http://liknorm.readthedocs.io/
-  dev_url: http://github.com/glimix/liknorm
+  doc_url: https://liknorm.readthedocs.io/
+  dev_url: https://github.com/limix/liknorm
 
 extra:
   recipe-maintainers:
