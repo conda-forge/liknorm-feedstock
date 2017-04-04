@@ -18,6 +18,7 @@ build:
 requirements:
   build:
     - python  # [win]
+    - conda-build
     - toolchain
     - cmake
 
