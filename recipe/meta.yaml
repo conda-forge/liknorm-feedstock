@@ -1,6 +1,6 @@
 {% set name = "liknorm" %}
-{% set version = "1.2.3" %}
-{% set sha256 = "19999e2561e19683cb2875c56f48e982a56ce8336c85da4f8ae45ba6c4dc572f" %}
+{% set version = "1.2.4" %}
+{% set sha256 = "ebfd3ec617a274f5feaf6a64de1a6b90be434c75eb986b731fd4caa400d3bfed" %}
 
 package:
   name: {{ name|lower }}
@@ -12,8 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
-  skip: True  # [win32 or (win and py<35)]
+  number: 0
+  skip: True  # [win32 or linux32]
 
 requirements:
   build:
