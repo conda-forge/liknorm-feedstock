@@ -1,6 +1,6 @@
 {% set name = "liknorm" %}
-{% set version = "1.2.4" %}
-{% set sha256 = "db3ded71412b00a5619788dc11d63d8d1b945743349ff457edacbfd576080cd5" %}
+{% set version = "1.2.6" %}
+{% set sha256 = "a2477aef046ab08f41cc41628b9a23971b1fccb11c6f1ffeacae12c0146cf803" %}
 
 package:
   name: {{ name|lower }}
@@ -31,6 +31,7 @@ test:
     - test -e $PREFIX/lib/libliknorm.dylib  # [osx]
     - test -e $PREFIX/lib/libliknorm_static.a  # [osx]
     - if NOT exist %PREFIX%/lib/liknorm.lib exit 1  # [win]
+    - if NOT exist %PREFIX%/lib/liknorm.dll exit 1  # [win]
     - if NOT exist %PREFIX%/lib/liknorm_static.lib exit 1  # [win]
 
 about:
