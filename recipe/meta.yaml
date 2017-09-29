@@ -39,7 +39,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: 'Moments of the product of an exponential-family likelihood with a Normal distribution'
+  summary: 'Moments of the product of an exponential-family likelihood with Normal distribution'
   doc_url: https://liknorm.readthedocs.io/
   dev_url: https://github.com/limix/liknorm
 
