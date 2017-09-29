@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/limix/liknorm/archive/v{{ version }}.tar.gz
+  url: https://github.com/limix/liknorm/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
