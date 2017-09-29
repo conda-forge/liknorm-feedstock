@@ -20,6 +20,7 @@ requirements:
     - conda-build
     - toolchain
     - cmake
+    - hcephes >=0.2.3  # [win and py27]
 
 test:
   requires:
