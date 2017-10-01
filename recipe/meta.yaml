@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -20,6 +20,9 @@ requirements:
     - conda-build
     - toolchain
     - cmake
+    - hcephes >=0.2.3  # [win and py27]
+  run:
+    - python  # [win]
     - hcephes >=0.2.3  # [win and py27]
 
 test:
