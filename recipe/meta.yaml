@@ -12,7 +12,13 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
+  features:
+    - vc9   # [win and py27]
+    - vc10  # [win and py34]
+    - vc14  # [win and py35]
+    - vc14  # [win and py36]
+
 
 requirements:
   build:
@@ -21,18 +27,22 @@ requirements:
     - toolchain
     - cmake
     - hcephes >=0.2.3  # [win and py27]
+    - vc 9   # [win and py27]
+    - vc 10  # [win and py34]
+    - vc 14  # [win and py35]
+    - vc 14  # [win and py36]
   run:
-    - python  # [win]
     - hcephes >=0.2.3  # [win and py27]
+    - vc 9   # [win and py27]
+    - vc 10  # [win and py34]
+    - vc 14  # [win and py35]
+    - vc 14  # [win and py36]
 
 test:
-  requires:
-    - python  # [win]
   commands:
     - test -e $PREFIX/lib/libliknorm.so  # [linux]
-    - test -e $PREFIX/lib/libliknorm_static.a  # [linux]
     - test -e $PREFIX/lib/libliknorm.dylib  # [osx]
-    - test -e $PREFIX/lib/libliknorm_static.a  # [osx]
+    - test -e $PREFIX/lib/libliknorm_static.a  # [unix]
     - if NOT exist %PREFIX%/lib/liknorm.lib exit 1  # [win]
     - if NOT exist %PREFIX%/lib/liknorm.dll exit 1  # [win]
     - if NOT exist %PREFIX%/lib/liknorm_static.lib exit 1  # [win]

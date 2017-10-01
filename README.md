@@ -7,7 +7,7 @@ Package license: MIT
 
 Feedstock license: BSD 3-Clause
 
-Summary: Moments of the product of an exponential-family likelihood with a Normal distribution
+Summary: Moments of the product of an exponential-family likelihood with Normal distribution
 
 
 
