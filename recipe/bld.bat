@@ -1,3 +1,11 @@
+set LIB=%LIBRARY_LIB%;.\lib;%LIB%
+set LIBPATH=%LIBRARY_LIB%;.\lib;%LIBPATH%
+set INCLUDE=%LIBRARY_INC%;%INCLUDE%
+
+IF "%PY_VER%"=="2.7" (
+    copy %PREFIX%\Lib\hcephes.dll %LIBRARY_BIN%
+)
+
 mkdir build
 cd build
 
