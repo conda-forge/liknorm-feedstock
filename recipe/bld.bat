@@ -4,6 +4,7 @@ set INCLUDE=%LIBRARY_INC%;%INCLUDE%
 
 IF "%PY_VER%"=="2.7" (
     copy %PREFIX%\Lib\hcephes.dll %LIBRARY_BIN%
+    copy %PREFIX%\Lib\hcephes.lib %LIBRARY_BIN%
 )
 
 mkdir build
