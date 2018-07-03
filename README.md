@@ -14,14 +14,16 @@ Summary: Moments of the product of an exponential-family likelihood with Normal 
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/liknorm-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/liknorm-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/liknorm-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/liknorm-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/liknorm-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/liknorm-feedstock/branch/master)
+![Linux disabled](https://img.shields.io/badge/linux-disabled-lightgrey.svg)
+![OSX disabled](https://img.shields.io/badge/OSX-disabled-lightgrey.svg)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/liknorm/badges/version.svg)](https://anaconda.org/conda-forge/liknorm)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/liknorm/badges/downloads.svg)](https://anaconda.org/conda-forge/liknorm)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-liknorm-green.svg)](https://anaconda.org/conda-forge/liknorm) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/liknorm.svg)](https://anaconda.org/conda-forge/liknorm) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/liknorm.svg)](https://anaconda.org/conda-forge/liknorm) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/liknorm.svg)](https://anaconda.org/conda-forge/liknorm) |
 
 Installing liknorm
 ==================
