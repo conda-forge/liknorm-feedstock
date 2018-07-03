@@ -13,7 +13,7 @@ source:
 
 build:
   number: 1
-  skip: true  # [win and vc<14
+  skip: true  # [win and vc<14]
 
 requirements:
   build:
@@ -29,9 +29,9 @@ test:
     - test -e $PREFIX/lib/libliknorm.so  # [linux]
     - test -e $PREFIX/lib/libliknorm.dylib  # [osx]
     - test -e $PREFIX/lib/libliknorm_static.a  # [unix]
-    - if NOT exist %PREFIX%/include/liknorm.h exit 1       # [win]
-    - if NOT exist %PREFIX%/lib/liknorm.lib exit 1         # [win]
-    - if NOT exist %PREFIX%/bin/liknorm.dll exit 1         # [win]
+    - if NOT exist %PREFIX%/include/liknorm.h exit 1  # [win]
+    - if NOT exist %PREFIX%/lib/liknorm.lib exit 1  # [win]
+    - if NOT exist %PREFIX%/bin/liknorm.dll exit 1  # [win]
     - if NOT exist %PREFIX%/lib/liknorm_static.lib exit 1  # [win]
 
 about:
