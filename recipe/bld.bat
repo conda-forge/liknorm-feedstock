@@ -2,6 +2,8 @@ set LIB=%LIBRARY_LIB%;.\lib;%LIB%
 set LIBPATH=%LIBRARY_LIB%;.\lib;%LIBPATH%
 set INCLUDE=%LIBRARY_INC%;%INCLUDE%
 
+set "CFLAGS=-MD"
+
 pushd . && mkdir build && cd build
 if errorlevel 1 exit 1
 
