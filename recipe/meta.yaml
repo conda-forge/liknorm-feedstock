@@ -1,6 +1,6 @@
 {% set name = "liknorm" %}
-{% set version = "1.4.1" %}
-{% set sha256 = "276437cab54fa96cddb8b2fb24fa36225f9fe0f029d4d15f8cad4eab9ca9896f" %}
+{% set version = "1.4.2" %}
+{% set sha256 = "a2be79f9a15ae1e2f7109973c85ba9012cb7273129e07d3379d0440cb5fe5d59" %}
 
 package:
   name: {{ name|lower }}
@@ -17,8 +17,8 @@ build:
 
 requirements:
   build:
-    - cmake
     - {{ compiler('c') }}
+    - cmake
   host:
     - conda-build
   run:
