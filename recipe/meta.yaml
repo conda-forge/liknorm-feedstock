@@ -1,6 +1,6 @@
 {% set name = "liknorm" %}
-{% set version = "1.4.1" %}
-{% set sha256 = "276437cab54fa96cddb8b2fb24fa36225f9fe0f029d4d15f8cad4eab9ca9896f" %}
+{% set version = "1.4.3" %}
+{% set sha256 = "ff6c40e9524d67e2eecce88e63d900ec786311d7e7fccf22bea3c118a7754db1" %}
 
 package:
   name: {{ name|lower }}
@@ -13,29 +13,15 @@ source:
 
 build:
   number: 0
-  skip: true  # [win and py27]
-  features:
-    - vc9   # [win and py27]
-    - vc10  # [win and py34]
-    - vc14  # [win and py35]
-    - vc14  # [win and py36]
-
+  skip: true  # [win and vc<14]
 
 requirements:
   build:
-    - python  # [win]
-    - conda-build
-    - toolchain
+    - {{ compiler('c') }}
     - cmake
-    - vc 9   # [win and py27]
-    - vc 10  # [win and py34]
-    - vc 14  # [win and py35]
-    - vc 14  # [win and py36]
+  host:
+    - conda-build
   run:
-    - vc 9   # [win and py27]
-    - vc 10  # [win and py34]
-    - vc 14  # [win and py35]
-    - vc 14  # [win and py36]
 
 test:
   commands:
@@ -43,10 +29,10 @@ test:
     - test -e $PREFIX/lib/libliknorm.so  # [linux]
     - test -e $PREFIX/lib/libliknorm.dylib  # [osx]
     - test -e $PREFIX/lib/libliknorm_static.a  # [unix]
-    - if NOT exist %PREFIX%/include/liknorm.h exit 1       # [win]
-    - if NOT exist %PREFIX%/lib/liknorm.lib exit 1         # [win]
-    - if NOT exist %PREFIX%/bin/liknorm.dll exit 1         # [win]
-    - if NOT exist %PREFIX%/lib/liknorm_static.lib exit 1  # [win]
+    - if NOT exist %LIBRARY_INC%/liknorm.h exit 1  # [win]
+    - if NOT exist %LIBRARY_LIB%/liknorm.lib exit 1  # [win]
+    - if NOT exist %LIBRARY_BIN%/liknorm.dll exit 1  # [win]
+    - if NOT exist %LIBRARY_LIB%/liknorm_static.lib exit 1  # [win]
 
 about:
   home: https://github.com/limix/liknorm

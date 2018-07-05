@@ -1,26 +1,15 @@
-set LIB=%LIBRARY_LIB%;.\lib;%LIB%
-set LIBPATH=%LIBRARY_LIB%;.\lib;%LIBPATH%
-set INCLUDE=%LIBRARY_INC%;%INCLUDE%
+pushd . && mkdir build && cd build
 
-IF "%PY_VER%"=="2.7" (
-    copy %PREFIX%\Lib\hcephes.dll %LIBRARY_BIN%
-    copy %PREFIX%\Lib\hcephes.lib %LIBRARY_BIN%
-)
-
-mkdir build
-cd build
-
-cmake -G "NMake Makefiles" ^
-         -DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=TRUE ^
-         -DCMAKE_INSTALL_PREFIX:PATH=%PREFIX% ^
+cmake -G "%CMAKE_GENERATOR%" ^
+         -D CMAKE_BUILD_TYPE=Release ^
+         -D CMAKE_INSTALL_PREFIX:PATH=%LIBRARY_PREFIX% ^
          %SRC_DIR%
 if errorlevel 1 exit 1
 
-nmake
+cmake --build . --config Release --target install
 if errorlevel 1 exit 1
 
-ctest
+ctest -V --output-on-failure -C Release
 if errorlevel 1 exit 1
 
-nmake install
-if errorlevel 1 exit 1
+popd && rd /q /s build
