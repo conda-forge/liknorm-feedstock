@@ -1,6 +1,6 @@
 {% set name = "liknorm" %}
-{% set version = "1.4.4" %}
-{% set sha256 = "af29107f06e91b7cefeb36070e11bc10442f8d944751a50aef33878d78230d7b" %}
+{% set version = "1.4.5" %}
+{% set sha256 = "8b1b3c4e18d54b8c91759aff74faaad2bcff587a67ec9183ee0d138ccae56b79" %}
 
 package:
   name: {{ name|lower }}
