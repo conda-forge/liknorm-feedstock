@@ -1,6 +1,6 @@
 {% set name = "liknorm" %}
-{% set version = "1.4.6" %}
-{% set sha256 = "7661d407a53af684debf7a0ed2f54f6b34493abe1bb4f8a4defd431edb688af0" %}
+{% set version = "1.5.1" %}
+{% set sha256 = "907e56d7371935ad4458931c3ea07d2820e140eaf48bc6a946a11365bffec5af" %}
 
 package:
   name: {{ name|lower }}
@@ -12,8 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
-  skip: true  # [win and vc<14]
+  number: 0
+  skip: true  # [vc<14]
 
 requirements:
   build:
@@ -22,6 +22,7 @@ requirements:
   host:
     - conda-build
   run:
+    - vs2015_runtime  # [win]
 
 test:
   commands:
