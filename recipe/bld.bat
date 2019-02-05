@@ -1,6 +1,6 @@
 pushd . && mkdir build && cd build
 
-cmake -G "%CMAKE_GENERATOR%" ^
+cmake -G "NMake Makefiles" ^
          -D CMAKE_BUILD_TYPE=Release ^
          -D CMAKE_INSTALL_PREFIX:PATH=%LIBRARY_PREFIX% ^
          %SRC_DIR%
