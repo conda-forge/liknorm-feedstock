@@ -18,9 +18,9 @@ Summary: Moments of the product of an exponential-family likelihood with Normal 
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/liknorm-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/liknorm-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/liknorm-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/liknorm-feedstock)
 [![Windows](https://img.shields.io/appveyor/ci/conda-forge/liknorm-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/liknorm-feedstock/branch/master)
+![Linux disabled](https://img.shields.io/badge/linux-disabled-lightgrey.svg)
+![OSX disabled](https://img.shields.io/badge/OSX-disabled-lightgrey.svg)
 
 Current release info
 ====================
