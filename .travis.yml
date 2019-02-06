@@ -12,6 +12,9 @@ env:
   matrix:
     - CONFIG=osx_
 
+  global:
+    # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
+    - secure: "None"
 
 
 before_install:
