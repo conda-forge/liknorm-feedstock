@@ -1,6 +1,6 @@
 {% set name = "liknorm" %}
-{% set version = "1.5.1" %}
-{% set sha256 = "907e56d7371935ad4458931c3ea07d2820e140eaf48bc6a946a11365bffec5af" %}
+{% set version = "1.5.2" %}
+{% set sha256 = "03c4925abc612f0930a3ee756ce25b1dea49b1c9d82885c69ccdad6809f23f05" %}
 
 package:
   name: {{ name|lower }}
@@ -12,28 +12,27 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and vc<14]
 
 requirements:
   build:
     - {{ compiler('c') }}
     - cmake
-  host:
-    - conda-build
-  run:
-    - vs2015_runtime  # [win]
+    - ninja  # [win]
+  # host:
+  #   - conda-build
+  # run:
+  #   - vs2015_runtime  # [win]
 
 test:
   commands:
     - test -e $PREFIX/include/liknorm.h  # [unix]
     - test -e $PREFIX/lib/libliknorm.so  # [linux]
     - test -e $PREFIX/lib/libliknorm.dylib  # [osx]
-    - test -e $PREFIX/lib/libliknorm_static.a  # [unix]
     - if NOT exist %LIBRARY_INC%/liknorm.h exit 1  # [win]
     - if NOT exist %LIBRARY_LIB%/liknorm.lib exit 1  # [win]
     - if NOT exist %LIBRARY_BIN%/liknorm.dll exit 1  # [win]
-    - if NOT exist %LIBRARY_LIB%/liknorm_static.lib exit 1  # [win]
 
 about:
   home: https://github.com/limix/liknorm
