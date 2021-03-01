@@ -1,6 +1,6 @@
 {% set name = "liknorm" %}
-{% set version = "1.5.1" %}
-{% set sha256 = "907e56d7371935ad4458931c3ea07d2820e140eaf48bc6a946a11365bffec5af" %}
+{% set version = "1.5.3" %}
+{% set sha256 = "f54ac68d326a2ba44d867aa4de5ea0295496d09b8443fd98d88a2ea1b701c096" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and vc<14]
 
 requirements:
@@ -40,7 +40,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.md
-  summary: 'Moments of the product of an exponential-family likelihood with Normal distribution'
+  summary: Moments of the product of an exponential-family likelihood with Normal distribution
   doc_url: https://liknorm.readthedocs.io/
   dev_url: https://github.com/limix/liknorm
 
