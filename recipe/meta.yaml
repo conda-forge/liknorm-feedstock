@@ -1,6 +1,6 @@
 {% set name = "liknorm" %}
-{% set version = "1.5.2" %}
-{% set sha256 = "03c4925abc612f0930a3ee756ce25b1dea49b1c9d82885c69ccdad6809f23f05" %}
+{% set version = "1.5.6" %}
+{% set sha256 = "cf72afa6b3af319b8b96d7ab0e3ee3ac126ae431897b35d5470bbf5e3b2925de" %}
 
 package:
   name: {{ name|lower }}
@@ -20,17 +20,13 @@ requirements:
     - {{ compiler('c') }}
     - cmake
     - ninja  # [win]
-  # host:
-  #   - conda-build
-  # run:
-  #   - vs2015_runtime  # [win]
 
 test:
   commands:
-    - test -e $PREFIX/include/liknorm.h  # [unix]
+    - test -e $PREFIX/include/liknorm/liknorm.h  # [unix]
     - test -e $PREFIX/lib/libliknorm.so  # [linux]
     - test -e $PREFIX/lib/libliknorm.dylib  # [osx]
-    - if NOT exist %LIBRARY_INC%/liknorm.h exit 1  # [win]
+    - if NOT exist %LIBRARY_INC%/liknorm/liknorm.h exit 1  # [win]
     - if NOT exist %LIBRARY_LIB%/liknorm.lib exit 1  # [win]
     - if NOT exist %LIBRARY_BIN%/liknorm.dll exit 1  # [win]
 
